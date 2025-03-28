@@ -7,7 +7,7 @@ require("dotenv").config();
 
 const app = express();
 app.use(cors()); // CORS enable for frontend requests
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 
 // OpenWeather API Key (Replace with your own key)
 const API_KEY = process.env.API_KEY;
