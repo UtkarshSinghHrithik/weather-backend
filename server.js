@@ -30,6 +30,20 @@ app.get("/weather", async (req, res) => {
   }
 });
 
+
+app.get(("/" , (req  ,res)=>{
+  res.send({
+    activeStatus:true,
+    error:false, 
+    
+  })
+}))
+
+
+
+
+
+
 // Endpoint to get weather by coordinates (latitude & longitude)
 app.get("/weather/coordinates", async (req, res) => {
   const { lat, lon } = req.query;
