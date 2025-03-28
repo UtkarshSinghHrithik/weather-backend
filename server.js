@@ -6,7 +6,9 @@ require("dotenv").config();
 
 
 const app = express();
-app.use(cors()); // CORS enable for frontend requests
+app.use(cors({
+  origin: ["http://localhost:5000/weather?city=Delhi" , "https://weather-frontend.netlify.app/"]
+})); // CORS enable for frontend requests
 const PORT = 5000;
 
 // OpenWeather API Key (Replace with your own key)
