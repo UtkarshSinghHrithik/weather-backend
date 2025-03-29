@@ -7,7 +7,7 @@ require("dotenv").config();
 
 const app = express();
 app.use(cors({
-  origin: ["http://localhost:5000/weather?city=Delhi" , "https://weather-frontend.netlify.app/"]
+  origin: ["http://localhost:5173" , "https://elegant-baklava-24a2c8.netlify.app"]
 })); // CORS enable for frontend requests
 const PORT = 5000;
 
@@ -27,6 +27,7 @@ app.get("/weather", async (req, res) => {
       `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`
     );
     res.json(response.data);
+    console.log( res.json(response.data))
   } catch (error) {
     res.status(500).json({ error: "Error fetching weather data" });
   }
