@@ -7,7 +7,7 @@ require("dotenv").config();
 
 const app = express();
 app.use(cors({
-  origin: ["http://localhost:5173" , "https://elegant-baklava-24a2c8.netlify.app"]
+  origin: ["http://localhost:5173" , "https://thunderous-marigold-4e5e2b.netlify.app"]
 })); // CORS enable for frontend requests
 const PORT = 5000;
 
